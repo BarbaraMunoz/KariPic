@@ -1,0 +1,662 @@
+/* Body */
+body {
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 50px;
+    padding-top: 60px;
+    background: #f9f9fb;
+}
+
+/* NAVBAR */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+  /* Estilos para los enlaces del navbar */
+
+.custom-logo {
+    height: 70px; /* Ajusta la altura deseada para el logo */
+    display: flex; /* Permite que la imagen ocupe todo el espacio verticalmente */
+    align-items: center; /* Centra verticalmente la imagen */
+}
+
+.logo-image {
+    height: 180%; /* Hace que la imagen ocupe todo el espacio verticalmente */
+     /* Permite que el ancho se ajuste automáticamente para mantener la proporción de la imagen */
+}
+
+.bg-nav {
+    background: linear-gradient(to bottom, #b8b7b7, #f1f1f1);
+}
+
+.navbar {
+    font-size: 18px; /* Ajusta el valor para cambiar el tamaño de fuente */
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+/* Personaliza el estilo del botón de Iniciar Sesión */
+.btn-login {
+    background-color: #ffc107; /* Color de fondo */
+    border-color: #ffc107; /* Color del borde */
+    color: #000; /* Color del texto por defecto (negro) */
+    transition: color 0.3s ease-in-out; /* Agrega transición suave al cambio de color */
+    margin-right: 10px; /* Mueve el botón hacia la izquierda */
+}
+
+/* Cambia el color del texto y el fondo al pasar el ratón por encima */
+.btn-login:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+    color: #fff; /* Cambia el color del texto a blanco */
+}
+
+
+/* Estilos para el botón del dropdown */
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+/* Estilos para el menú del dropdown */
+.dropdown-menu {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/*Portafolio*/
+/* Estilos para la contenedor de las cards */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-img {
+    transform: scale(1.1); /* Agranda la imagen al hacer hover */
+}
+
+/* Nuevos estilos para el overlay al hacer hover */
+.section-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 40px auto;
+    color: #333; 
+    border-bottom: 2px solid #ccc; /* Agrega un borde inferior */
+    padding-bottom: 5px; /* Ajusta el espaciado entre el título y el borde inferior */
+    text-align: center;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.253); /* Cambia la transparencia */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.title-container {
+    position: relative; /* Establece el contenedor como posición relativa */
+}
+
+.portfolio-title {
+    color: #ffffff;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 275px;
+}
+
+.btn-container {
+    position: absolute; /* Establece el contenedor del botón como posición absoluta */
+    bottom: 20px; /* Ajusta la distancia desde abajo */
+    left: 50%; /* Centra horizontalmente el botón en relación con el contenedor */
+    transform: translateX(-50%); /* Centra el botón completamente */
+}
+
+.btn-detail {
+    background-color: #6c757d;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    padding: 4px 20px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-detail:hover {
+    background-color: #c0c6ca; /* Cambia el color de fondo del botón en hover */
+    color: #000;
+}
+
+/* Estilo para el botón Postear */
+.btn-gradient {
+    background: linear-gradient(45deg, #FFA500, #FFD700);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 120px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 2px 0 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para el grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas */
+    grid-gap: 20px;
+}
+
+.grid-item {
+    margin: 0;
+}
+
+
+/* Estilo para el avatar */
+.avatar {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Estilo para los comentarios */
+.comment {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+
+/* FORM KARIPHOTO */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.image-preview-container {
+    border: 1px solid #ccc; /* Agrega un borde alrededor del contenedor */
+    padding: 10px; /* Añade un espacio interno alrededor de la imagen */
+    text-align: center; /* Centra la imagen horizontalmente */
+    max-width: 100%; /* Asegura que el contenedor no sea más ancho que su contenedor padre */
+    margin-top: 10px; /* Agrega un espacio superior para separarlo del campo anterior */
+}
+
+.image-preview {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+    max-height: 500px; /* Limita la altura máxima de la imagen en el preview */
+}
+
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-control-file {
+    padding: 10px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la vista show */
+.show-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center; /* Centra el contenido en el contenedor */
+    padding: 20px;
+}
+
+.show-card img {
+    width: auto; /* Utiliza todo el ancho disponible sin deformarse */
+    max-height: 600px; /* Ajusta la altura máxima para evitar que se achique demasiado */
+    object-fit: contain; /* Ajusta la imagen proporcionalmente sin cortes */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Agrega un espacio entre la imagen y el título */
+}
+
+.show-card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.show-card-text {
+    font-size: 16px;
+    margin: 50px auto;
+}
+
+.show-actions {
+    margin-top: 20px;
+}
+
+.show-actions .btn {
+    margin-right: 10px;
+}
+
+.show-comments {
+    margin-top: 40px;
+}
+
+/*Botones edit y delete*/
+/* Estilos para los botones Edit y Delete */
+.btns {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-edit {
+    background-color: transparent;
+    color: #0359b6;
+    border: 1px solid #0359b6;
+}
+
+.btn-edit:hover {
+    background-color:#0359b6;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: transparent;
+    color: #a3343d;
+    border: 1px solid #a3343d;
+}
+
+.btn-delete:hover {
+    background-color:  #a3343d;
+    color: #fff;
+}
+
+.comments-container {
+    width: 850px;
+    margin: 50px auto;
+    background-color: #e5e2e2c9; /* Cambia el color de fondo del contenedor */
+    border-radius: 5px;
+    border: 2px solid #ccc; /* Agrega un borde al avatar */
+    padding: 20px; /* Ajusta el espaciado interior del contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para cada comentario */
+.comment {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #f06107;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Estilos para el avatar del usuario */
+.comment .avatar {
+    width: 130px; /* Ajusta el ancho del avatar */
+    height: 130px; /* Ajusta la altura del avatar */
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #ccc; /* Agrega un borde al avatar */
+}
+
+/* Estilos para el contenido del comentario */
+.comment-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Estilos para el nombre de usuario */
+.user-name {
+    font-weight: bold;
+    color: #14a1d4;
+}
+
+/* Estilos para el texto con color atenuado (timestamp) */
+.timestamp {
+    margin-left: auto;
+    color: #777;
+    font-size: 0.875rem;
+    margin: 0.2rem 0;
+}
+
+/*Form Add-Edit Comment*/
+/* Estilos para el formulario de comentarios */
+.add-comment {
+    width: 850px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9fb; /* Cambia el color de fondo */
+    border-radius: 5px;
+    border: 1px solid #14a1d4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-comment h3 {
+    margin-bottom: 15px;
+    color: #333; /* Cambia el color del título */
+}
+
+.form-field-standar {
+    margin-bottom: 15px;
+}
+
+.form-input-standar {
+    width: 100%;
+    padding-bottom: 80px;
+    margin-top: 15px;
+    border: 1px solid #ced4da; /* Cambia el color del borde */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para el botón de envío del formulario */
+.form-actions {
+    margin-top: 15px;
+}
+
+.form-actions .btn-primary {
+    padding: 10px 20px;
+    background-color: #007bff; /* Cambia el color de fondo del botón a azul */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-actions .btn-primary:hover {
+    background-color: #0056b3; /* Cambia el color de fondo del botón en hover */
+}
+
+/* Nueva Publicacion */
+.container-new {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/*PERFIL*/
+.profile-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.profile-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff; /* Agrega un borde blanco al avatar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega sombra al avatar */
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-field {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.edit-profile-link {
+    display: block;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.edit-profile-link:hover {
+    color: #0056b3;
+}
+
+/*EDITAR PERFIL*/
+.edit-profile-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 30px auto;
+    max-width: 400px; /* Cambia el ancho del container */
+}
+
+.edit-profile-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.edit-profile-field {
+    margin-bottom: 20px;
+}
+
+.edit-profile-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.edit-profile-actions {
+    margin-top: 20px;
+}
+
+.cancel-account-action {
+    margin-top: 50px;
+}
+
+/*ABOUT*/
+/* Estilos para la vista "about" */
+.about-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center; /* Centra el contenido en el contenedor */
+    padding: 20px;
+}
+
+.about-card-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-card-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+  /* Ajusta el ancho máximo de la card para centrar el contenido */
+@media (max-width: 768px) {
+    .about-card {
+    max-width: 80%;
+    }
+}
+
+/* Formularios Devise */
+/* Estilos para los formularios de Devise */
+.devise-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.devise-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.devise-form .field {
+    margin-bottom: 20px;
+}
+
+.devise-form label {
+    font-weight: bold;
+}
+
+.devise-form input[type="email"],
+.devise-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.devise-form .actions {
+    margin-top: 20px;
+}
+
+.devise-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.devise-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.devise-form .remember-me {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Boton back*/
+.back-link {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 10px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #f39c12;
+}
+
+/*Footer*/
+/* Estilos para el footer */
+.bg-footer {
+    background-color: #333; /* Cambia el color de fondo del footer */
+    margin-top: 40px;
+    padding: 15px 0; /* Ajusta el espacio interno del footer */
+}
+
+.bg-footer p {
+    margin: 0;
+    padding-top: 10px; /* Ajusta el espacio superior del texto */
+    color: #fff; /* Cambia el color del texto */
+    font-size: 14px; /* Cambia el tamaño de fuente del texto */
+}

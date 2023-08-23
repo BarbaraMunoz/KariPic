@@ -1,0 +1,7 @@
+<h1>New Comment</h1>
+
+<%= render partial: "comments/form", locals: { karina_photo: @karina_photo, comment: Comment.new } %>
+
+
+
+<%= link_to 'Back to Karina Photo', @comment.karina_photo, class: 'btn btn-secondary' %>

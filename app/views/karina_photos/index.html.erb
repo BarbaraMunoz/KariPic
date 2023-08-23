@@ -1,0 +1,56 @@
+<!-- index.html.erb -->
+<section class="portfolio">
+    <div class="container">
+        <h1 class="section-title py-5">Capturando Instantes</h1>
+        <% if user_signed_in? && current_user.admin? %>
+            <%= link_to 'Nueva Publicación', new_karina_photo_path, class: "btn btn-gradient mt-2 mb-5" %>
+        <% end %>
+        <div class="grid-container">
+            <% @karina_photos.each do |karina_photo| %>
+                <div class="grid-item">
+                    <div class="portfolio-item">
+                        <%= image_tag karina_photo.image, class: "img-fluid portfolio-img", alt: "Karina Photo" %>
+                        <div class="portfolio-overlay">
+                            <div class="title-container">
+                                <h4 class="portfolio-title"><%= karina_photo.title %></h4>
+                                <div class="btn-container">
+                                    <%= link_to 'Ver detalle', karina_photo_path(karina_photo), class: "btn btn-detail" %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card show-card">
+                <%= image_tag @karina_photo.image, class: "card-img-top img-fluid rounded-top", alt: "Karina Photo" %>
+                <div class="card-body">
+                    <h2 class="show-card-title"><%= @karina_photo.title %></h2>
+                    <p class="show-card-text"><%= @karina_photo.description %></p>
+                </div>
+                <% if user_signed_in? && current_user.admin? %>
+                <div class="card-footer">
+                    <div class="btns" role="group" aria-label="Actions">
+                        <%= link_to 'Editar', edit_karina_photo_path(@karina_photo), class: "btn btn-edit" %>
+                        <%= button_to 'Eliminar', @karina_photo, method: :delete, data: { confirm: 'Estás seguro?' }, class: "btn btn-delete" %>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <% if user_signed_in? %>
+            <div class="add-comment my-4">
+                <%= render partial: "comments/form", locals: { karina_photo: @karina_photo, comment: @comment } %>
+            </div>
+        <% else %>
+            <div class="add-comment my-4">
+            <p>Por favor, <%= link_to 'Inicia Sesión', new_user_session_path %> para agregar comentarios.</p>
+            </div>
+        <% end %>
+
+        <div class="comments-container p-3">
+            <% if @karina_photo.comments.present? %>
+            <h3 class="mb-3">Comentarios</h3>
+                <ul class="list-unstyled">
+                    <% @karina_photo.comments.each do |comment| %>
+                        <li class="media mb-4 comment">
+                            <%= image_tag comment.user.avatar, class: 'avatar' %>
+                            <div class="media-body comment-content">
+                                <h5 class="mt-0 mb-1 user-name"><%= comment.user.name %></h5>
+                                <small class="text-muted timestamp"><%= comment.created_at.strftime('%d de %B de %Y, %H:%M') %></small>
+                                <p><%= comment.content %></p>
+                                <% if comment.user == current_user %>
+                                <div class="btns">
+                                    <%= link_to 'Editar', edit_karina_photo_comment_path(@karina_photo, comment), class: 'btn btn-edit' %>
+                                    <%= button_to 'Eliminar', karina_photo_comment_path(@karina_photo, comment), method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'btn btn-delete' %>
+                                </div>
+                                <% end %>
+                            </div>
+                        </li>
+                    <% end %>
+                </ul>
+            <% else %>
+                <h4>¡Tu comentario será el primero!</h4>
+            <% end %>
+        </div>
+
+            <%= link_to karina_photos_path, class: "back-link" do %>
+            <i class="fas fa-arrow-left"></i> Volver
+            <% end %>
+        </div>
+    </div>
+</div>
+

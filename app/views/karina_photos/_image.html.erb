@@ -1,0 +1,17 @@
+<div data-controller="preview">
+    <%= f.label :image, "Cargar Imagen", style: "display: block" %>
+
+    <%= f.file_field :image,
+                    direct_upload: true,
+                    data: { preview_target: "input", action: "change->preview#preview" } %>
+
+    <div class="image-preview-container">
+        <% if @karina_photo.image.attached? %>
+            <%= image_tag karina_photo.image, data: { preview_target: "preview" }, class: "image-preview" %>
+        <% else %>
+            <%= image_tag "", data: { preview_target: "preview" }, class: "image-preview" %>
+        <% end %>
+    </div>
+</div>
+
+

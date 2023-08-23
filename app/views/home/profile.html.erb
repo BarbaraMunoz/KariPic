@@ -1,0 +1,13 @@
+<div class="profile-container">
+    <h1 class="profile-title">Mi Foto</h1>
+    
+    <%= image_tag @user.avatar, class: 'profile-avatar' %>
+    
+    <div class="profile-info">
+        <p class="profile-field">Nombre: <%= @user.name %></p>
+        <p class="profile-field">Email: <%= @user.email %></p>
+    </div>
+    
+    <%= link_to 'Editar Perfil', edit_user_registration_path, class: 'edit-profile-link' %>
+</div>
+

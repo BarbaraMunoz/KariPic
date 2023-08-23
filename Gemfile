@@ -84,3 +84,7 @@ gem "figaro", "~> 1.2"
 gem "aws-sdk-s3", "~> 1.132"
 
 gem "faker"
+
+gem "activestorage"
+
+gem 'materialize-sass'

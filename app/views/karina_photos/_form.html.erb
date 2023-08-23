@@ -1,0 +1,23 @@
+<div class="container-new">   
+    <%= form_for(@karina_photo, html: { multipart: true }) do |f| %>
+
+        <%= render partial: "karina_photos/image", locals: { f: f, karina_photo: @karina_photo } %>
+
+        <div class="form-field">
+            <%= f.label :Título %>
+            <%= f.text_field :title, class: "form-control" %>
+        </div>
+
+        <div class="form-field">
+            <%= f.label :Descripción %>
+            <%= f.text_area :description, class: "form-control" %>
+        </div>
+
+        <div class="form-actions">
+            <%= f.submit 'Guardar', class: "btn btn-primary" %>
+        </div>
+    <% end %>
+</div>
+
+
+

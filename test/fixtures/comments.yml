@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+
+comment_one:
+  content: This is a comment on the first photo.
+  user: karina
+  karina_photo: one
+
+comment_two:
+  content: Another comment on the first photo.
+  user: regular_user
+  karina_photo: one
+
