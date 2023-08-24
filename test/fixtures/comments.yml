@@ -3,11 +3,12 @@
 
 comment_one:
   content: This is a comment on the first photo.
-  user: karina
-  karina_photo: one
+  user: regular_user
+  karina_photo: karina_photos_one
 
 comment_two:
   content: Another comment on the first photo.
   user: regular_user
-  karina_photo: one
+  karina_photo: karina_photos_two
+
 

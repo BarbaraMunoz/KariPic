@@ -1,0 +1,11 @@
+# Para user/avatar
+karina_avatar:
+  name: avatar
+  record: karina (User)
+  blob: karina_avatar_blob
+
+# Para karina_photo/image
+karina_photos_one:
+  name: image
+  record: one (KarinaPhoto)
+  blob: karina_photos_one_blob

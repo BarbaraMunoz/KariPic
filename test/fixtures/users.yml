@@ -7,14 +7,15 @@
 karina:
   name: Karina
   email: karina@email.com
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
-  role: 2
+  role: admin
 
 regular_user:
-  name: Barbara
+  name: Bárbara
   email: b@gmail.com
-  encrypted_password: <%= Devise::Encryptor.digest(User, 'password456') %>
-  role: 0
+  role: ejecutivo
+
+
+
 
 
 

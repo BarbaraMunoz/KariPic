@@ -1,15 +1,21 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-
-one:
-  title: First Photo
-  description: This is the first photo.
+karina_photos_one:
+  title: Test Photo 1
+  description: Beautiful landscape
+  image: karina_photos_one
   user: karina
 
-two:
-  title: Second Photo
-  description: This is the second photo.
-  user: regular_user
+karina_photos_two:
+  title: Test Photo 2
+  description: Amazing sunset
+  user: karina
+
+
+
+
+
+
 
 
 

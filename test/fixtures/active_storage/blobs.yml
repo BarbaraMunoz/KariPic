@@ -1,0 +1,5 @@
+# Para user/avatar
+karina_avatar_blob: <%= ActiveStorage::FixtureSet.blob filename: "karina_avatar.png", service_name: "test_fixtures" %>
+
+# Para karina_photo/image
+karina_photos_one_blob: <%= ActiveStorage::FixtureSet.blob filename: "karina_image.png", service_name: "test_fixtures" %>

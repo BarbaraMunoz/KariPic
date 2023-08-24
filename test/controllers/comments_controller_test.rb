@@ -6,7 +6,7 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
 
   setup do
     @comment = comments(:comment_one)
-    sign_in users(:karina)
+    sign_in users(:regular_user)
   end
 
   test "should create comment" do

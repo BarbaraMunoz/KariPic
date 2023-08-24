@@ -8,9 +8,7 @@
 
 require 'faker'
 
-n°.times do |i|
-    Nombre.create(campo: faker::dato, campo: faker::,etc)
-end
+
 
 # Crea o inserta registros predefinidos en nuestra tabla 
 - rails db:seed
